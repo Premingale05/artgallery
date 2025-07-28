@@ -3,153 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Art Gallery</title>
+    <title>My Profile</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Basic body styling */
+        /* Custom font for a clean look */
         body {
-            font-family: 'Inter', sans-serif; /* Using Inter font */
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header styling */
-        header {
-            text-align: center;
-            padding: 30px 20px;
-            background-color: #607D8B; /* A simpler, muted header color */
-            color: white;
-            border-bottom-left-radius: 10px; /* Slightly less rounded corners */
-            border-bottom-right-radius: 10px; /* Slightly less rounded corners */
-            margin-bottom: 25px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Simpler shadow */
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.2em; /* Slightly smaller font */
-        }
-
-        /* Gallery container styling */
-        .gallery-container {
-            display: grid; /* Use CSS Grid for a responsive layout */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-            gap: 20px; /* Slightly less space between items */
-            max-width: 1000px; /* Slightly smaller max width */
-            margin: 0 auto; /* Center the gallery */
-            padding: 15px;
-        }
-
-        /* Individual gallery item styling */
-        .gallery-item {
-            background-color: #fff;
-            border-radius: 8px; /* Slightly less rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Simpler shadow */
-            overflow: hidden; /* Ensures image corners are rounded */
-            transition: transform 0.2s ease; /* Faster hover effect */
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px); /* Less lift effect on hover */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px; /* Slightly smaller fixed height for consistency */
-            object-fit: cover; /* Cover the area, cropping if necessary */
-            display: block; /* Remove extra space below image */
-        }
-
-        .gallery-item-info {
-            padding: 12px; /* Slightly less padding */
-            text-align: center;
-        }
-
-        .gallery-item-info h3 {
-            margin-top: 0;
-            margin-bottom: 5px; /* Less margin */
-            color: #444;
-            font-size: 1.2em; /* Slightly smaller font */
-        }
-
-        /* Footer styling */
-        footer {
-            text-align: center;
-            padding: 20px; /* Less padding */
-            margin-top: 40px; /* Less margin */
-            background-color: #455A64; /* A simpler, muted footer color */
-            color: #eee;
-            border-top-left-radius: 10px; /* Slightly less rounded corners */
-            border-top-right-radius: 10px; /* Slightly less rounded corners */
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.85em; /* Slightly smaller font */
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-            .gallery-container {
-                grid-template-columns: 1fr; /* Single column on smaller screens */
-                padding: 10px;
-            }
-            .gallery-item img {
-                height: 180px; /* Adjust image height for smaller screens */
-            }
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
 
-    <header>
-        <h1>Our Art Gallery</h1>
-    </header>
-
-    <main class="gallery-container">
-        <!-- Gallery Item 1 -->
-        <div class="gallery-item">
-            <img src="C:\Users\comp\Downloads\p1.jpg" alt="Art Piece 1">
-            <div class="gallery-item-info">
-                <h3>SUKUNA</h3>
-            </div>
+    <!-- Main profile card container -->
+    <div class="bg-white rounded-xl shadow-lg p-8 max-w-sm w-full mx-auto flex flex-col items-center">
+        <!-- Profile Picture -->
+        <div class="mb-6">
+            <img 
+                src="https://placehold.co/150x150/A78BFA/FFFFFF?text=Profile" 
+                alt="Profile Picture" 
+                class="w-36 h-36 rounded-full object-cover border-4 border-purple-300 shadow-md"
+                onerror="this.onerror=null;this.src='https://placehold.co/150x150/CCCCCC/000000?text=Error';"
+            >
         </div>
 
-        <!-- Gallery Item 2 -->
-        <div class="gallery-item">
-            <img src="C:\Users\comp\Downloads\p2.jpg" alt="Art Piece 2">
-            <div class="gallery-item-info">
-                <h3>GOJO</h3>
-            </div>
+        <!-- Name -->
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">John Doe</h1>
+
+        <!-- Occupation/Title -->
+        <p class="text-lg text-purple-600 mb-6">Web Developer | Designer</p>
+
+        <!-- Short Bio -->
+        <div class="text-center text-gray-700 mb-8">
+            <p class="leading-relaxed">
+                Passionate about creating engaging and user-friendly web experiences. 
+                Constantly learning new technologies and striving for elegant solutions.
+            </p>
         </div>
 
-        <!-- Gallery Item 3 -->
-        <div class="gallery-item">
-            <img src="C:\Users\comp\Downloads\p3.jpg" alt="Art Piece 3">
-            <div class="gallery-item-info">
-                <h3>JINWOO</h3>
-            </div>
+        <!-- Interests Section -->
+        <div class="w-full">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4 border-b-2 border-purple-200 pb-2 text-center">Interests</h2>
+            <ul class="list-none p-0 m-0 grid grid-cols-2 gap-2 text-gray-600">
+                <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm text-center">Coding</li>
+                <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm text-center">Photography</li>
+                <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm text-center">Hiking</li>
+                <li class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm text-center">Reading</li>
+            </ul>
         </div>
-
-        <!-- Gallery Item 4 -->
-        <div class="gallery-item">
-            <img src="C:\Users\comp\Downloads\p4.jpg" alt="Art Piece 4">
-            <div class="gallery-item-info">
-                <h3>TANJIRO</h3>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Art Gallery</p>
-    </footer>
+    </div>
 
 </body>
 </html>
