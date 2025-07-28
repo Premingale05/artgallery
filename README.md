@@ -19,7 +19,7 @@
         <!-- Profile Picture -->
         <div class="mb-6">
             <img 
-                src="https://placehold.co/150x150/A78BFA/FFFFFF?text=Profile" 
+                src="https://i.pinimg.com/736x/4e/54/e8/4e54e882356e01cd1c1ccccd5b71a27a.jpg" 
                 alt="Profile Picture" 
                 class="w-36 h-36 rounded-full object-cover border-4 border-purple-300 shadow-md"
                 onerror="this.onerror=null;this.src='https://placehold.co/150x150/CCCCCC/000000?text=Error';"
